@@ -86,13 +86,16 @@ public class AlunoDaoTest {
 		assertEquals("Aécio", alunoDao.get(aluno).getFiliado().getNome());
 		assertEquals("Professor", alunoDao.get(aluno).getProfessor().getFiliado().getNome());
 		assertEquals("Dirceu", alunoDao.get(aluno).getProfessor().getFiliado().getEndereco().getBairro());
+		assertEquals("(086)1234-5432", alunoDao.get(aluno).getEntidade().getTelefone1());
+		assertEquals("Academia 1", alunoDao.get(aluno).getEntidade().getNome());
 	}
 	
 	@Test
 	public void testUpdateAluno() throws Exception{
 		clearDatabase();
 		assertEquals(0, alunoDao.list().size());
-		
+
+
 		alunoDao.save(aluno);
 		assertEquals(1, alunoDao.list().size());
 		assertEquals("Aécio", aluno.getFiliado().getNome());
@@ -100,10 +103,15 @@ public class AlunoDaoTest {
 		Aluno a1 = alunoDao.get(aluno);
 		a1.getFiliado().setNome("TesteUpdate");
 		alunoDao.save(a1);
-		
+
 		Aluno a2 = alunoDao.get(a1);
 		assertEquals("TesteUpdate", a2.getFiliado().getNome());
 		assertEquals(1, alunoDao.list().size());
+
+		//retornando nome original
+
+		a2.getFiliado().setNome("Aécio");
+		alunoDao.save(a2);
 	}
 	
 	@Test

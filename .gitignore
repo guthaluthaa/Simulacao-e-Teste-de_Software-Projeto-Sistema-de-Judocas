@@ -36,6 +36,5 @@ dependency-reduced-pom.xml
 *.iml
 out/
 
-# Arquivos de teste de cobertura (Decidir qual usar - ferramentas como JaCoCo ou Cobertura)
+# Arquivos de teste de cobertura
 target/site/jacoco/
-target/site/cobertura/
