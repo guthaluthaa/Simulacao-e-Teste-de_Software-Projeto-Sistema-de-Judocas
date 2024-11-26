@@ -1,4 +1,4 @@
-package org.fpij.jitakyoei.model.dao;
+package test.java.org.fpij.jitakyoei.model.dao;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,6 +11,8 @@ import org.fpij.jitakyoei.model.beans.Entidade;
 import org.fpij.jitakyoei.model.beans.Filiado;
 import org.fpij.jitakyoei.model.beans.Professor;
 import org.fpij.jitakyoei.util.DatabaseManager;
+import org.fpij.jitakyoei.model.dao.DAO;
+import org.fpij.jitakyoei.model.dao.DAOImpl;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -87,7 +89,7 @@ public class AlunoDaoTest {
 	}
 	
 	@Test
-	public void updateAluno() throws Exception{
+	public void testUpdateAluno() throws Exception{
 		clearDatabase();
 		assertEquals(0, alunoDao.list().size());
 		
@@ -107,23 +109,43 @@ public class AlunoDaoTest {
 	@Test
 	public void testListarEAdicionarAlunos(){
 		int qtd = alunoDao.list().size();
-		
-		alunoDao.save(new Aluno());
+
+		Aluno aluno1 = new Aluno();
+		aluno1.setFiliado(f1);
+		aluno1.setProfessor(professor);
+		aluno1.setEntidade(entidade);
+		alunoDao.save(aluno1);
 		assertEquals(qtd+1, alunoDao.list().size());
-		
-		alunoDao.save(new Aluno());
+
+		Aluno aluno2 = new Aluno();
+		aluno2.setFiliado(f1);
+		aluno2.setProfessor(professor);
+		aluno2.setEntidade(entidade);
+		alunoDao.save(aluno2);
 		assertEquals(qtd+2, alunoDao.list().size());
-		
-		alunoDao.save(new Aluno());
+
+		Aluno aluno3 = new Aluno();
+		aluno3.setFiliado(f1);
+		aluno3.setProfessor(professor);
+		aluno3.setEntidade(entidade);
+		alunoDao.save(aluno3);
 		assertEquals(qtd+3, alunoDao.list().size());
-		
-		alunoDao.save(new Aluno());
+
+		Aluno aluno4 = new Aluno();
+		aluno4.setFiliado(f1);
+		aluno4.setProfessor(professor);
+		aluno4.setEntidade(entidade);
+		alunoDao.save(aluno4);
 		assertEquals(qtd+4, alunoDao.list().size());
 		
 		clearDatabase();
 		assertEquals(0, alunoDao.list().size());
-		
-		alunoDao.save(new Aluno());
+
+		Aluno aluno5 = new Aluno();
+		aluno5.setFiliado(f1);
+		aluno5.setProfessor(professor);
+		aluno5.setEntidade(entidade);
+		alunoDao.save(aluno5);
 		assertEquals(1, alunoDao.list().size());
 	}
 	

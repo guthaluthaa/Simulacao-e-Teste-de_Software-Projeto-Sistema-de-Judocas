@@ -8,3 +8,34 @@ DER.mwb.beforefix
 bin/org/fpij/jitakyoei/view/gui/*.jfd
 fpij.db
 test.db
+
+# Diretórios de build (compilação)
+target/
+*.class
+*.log
+
+# Dependências baixadas pelo Maven
+*.jar
+*.war
+*.ear
+*.pom
+*.jpi
+*.hpi
+/.mvn/
+
+
+# Diretórios do Maven
+.mvn/
+dependency-reduced-pom.xml
+
+# Arquivos de logs
+*.log
+
+# Arquivos de compilação do IntelliJ
+.idea/
+*.iml
+out/
+
+# Arquivos de teste de cobertura (Decidir qual usar - ferramentas como JaCoCo ou Cobertura)
+target/site/jacoco/
+target/site/cobertura/
