@@ -35,6 +35,3 @@ dependency-reduced-pom.xml
 .idea/
 *.iml
 out/
-
-# Arquivos de teste de cobertura
-target/site/jacoco/

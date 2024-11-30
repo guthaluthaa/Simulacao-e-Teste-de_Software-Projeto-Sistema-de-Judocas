@@ -9,10 +9,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
 
     <repositories>
         <repository>
@@ -52,17 +53,16 @@
                 </executions>
             </plugin>
 
-            <!-- Plugin do Compilador Maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version> <!-- Certifique-se de usar uma versão que suporte Java 21 -->
+                <version>3.8.1</version> <!-- Use a version compatible with Java 8 -->
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
-            <!-- Outros plugins -->
+
         </plugins>
     </build>
 
@@ -76,6 +76,21 @@
             <version>3.2</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/genesis/dist/genesis-annotation-jdk5-3.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version> <!-- Você pode usar a versão mais recente -->
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version> <!-- Ou outra versão mais recente -->
+        </dependency>
+        <dependency>
+            <groupId>genesis.backport175</groupId>
+            <artifactId>backport</artifactId>
+            <version>175-1.1.RC1-snapshot</version>
         </dependency>
         <!-- Genesis Aspect -->
         <dependency>
@@ -191,5 +206,6 @@
                 <version>4.13.2</version> <!-- Use a versão mais recente disponível -->
                 <scope>test</scope>
             </dependency>
+
     </dependencies>
 </project>
