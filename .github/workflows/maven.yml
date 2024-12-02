@@ -56,7 +56,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: jacoco-report
-          path: target/site/jacoco-aggregate/index.html
+          path: target/site/jacoco/index.html
 
       # Passo 8: (Opcional) Publicar o relatório como um GitHub Pages
       - name: Deploy JaCoCo Report to GitHub Pages
