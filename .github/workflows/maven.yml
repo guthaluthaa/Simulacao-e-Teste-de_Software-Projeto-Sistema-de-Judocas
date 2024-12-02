@@ -58,7 +58,7 @@ jobs:
           name: jacoco-report
           path: target/site/jacoco/index.html
 
-      # Passo 8: (Opcional) Publicar o relatório como um GitHub Pages
+      # Passo 8: Publicar o relatório como um GitHub Pages
       - name: Deploy JaCoCo Report to GitHub Pages
         if: success()
         run: |
