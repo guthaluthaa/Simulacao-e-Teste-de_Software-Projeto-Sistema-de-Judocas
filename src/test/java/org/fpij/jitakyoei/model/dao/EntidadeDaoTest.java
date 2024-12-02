@@ -1,4 +1,4 @@
-package test.java.org.fpij.jitakyoei.business;
+package org.fpij.jitakyoei.model.dao;
 
 import static org.junit.Assert.*;
 
@@ -13,8 +13,8 @@ import org.fpij.jitakyoei.util.DatabaseManager;
 import org.fpij.jitakyoei.view.AppView;
 import org.fpij.jitakyoei.model.dao.DAO;
 import org.fpij.jitakyoei.model.dao.DAOImpl;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
     public class EntidadeDaoTest {
@@ -24,8 +24,8 @@ import org.junit.Test;
         private static Endereco endereco;
         private static AppView mockView;
 
-        @BeforeClass
-        public static void setUp() {
+        @Before
+        public void setUp() {
             // Configura o ambiente de teste
             DatabaseManager.setEnviroment(DatabaseManager.TEST);
 
@@ -67,10 +67,9 @@ import org.junit.Test;
             }
         }
 
-        @AfterClass
-        public static void tearDown() {
+        @After
+        public void tearDown() {
             clearDatabase();
-            DatabaseManager.close();
         }
 
         @Test

@@ -1,4 +1,5 @@
-package test.java.org.fpij.jitakyoei.model.dao;
+package org.fpij.jitakyoei.model.dao;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,8 +14,8 @@ import org.fpij.jitakyoei.model.beans.Professor;
 import org.fpij.jitakyoei.util.DatabaseManager;
 import org.fpij.jitakyoei.model.dao.DAO;
 import org.fpij.jitakyoei.model.dao.DAOImpl;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 
 public class AlunoDaoTest {
@@ -27,8 +28,8 @@ public class AlunoDaoTest {
 	private static Filiado filiadoProf;
 	private static Professor professor;
 	
-	@BeforeClass
-	public static void setUp(){
+	@Before
+	public void setUp(){
 		DatabaseManager.setEnviroment(DatabaseManager.TEST);
 		f1 = new Filiado();
 		f1.setNome("Aécio");
@@ -175,10 +176,9 @@ public class AlunoDaoTest {
 		assertEquals(0, alunoDao.search(a).size());
 	}
 	
-	@AfterClass
-	public static void closeDatabase(){
+	@After
+	public void closeDatabase(){
 		clearDatabase();
-		DatabaseManager.close();
 	}
 	
 }
