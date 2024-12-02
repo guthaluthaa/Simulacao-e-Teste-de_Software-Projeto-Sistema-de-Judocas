@@ -22,11 +22,11 @@ public class DAOImpl&lt;E&gt; implements DAO&lt;E&gt; {
 <span class="nc" id="L22">		this.clazz = clazz;</span>
 <span class="nc" id="L23">	}</span>
 	
-<span class="nc" id="L25">	public DAOImpl(Class&lt;E&gt; clazz, boolean useEquals){</span>
-<span class="nc" id="L26">		this.validator = new DefaultValidator&lt;E&gt;();</span>
-<span class="nc" id="L27">		this.useEquals = useEquals;</span>
-<span class="nc" id="L28">		this.clazz = clazz;</span>
-<span class="nc" id="L29">	}</span>
+<span class="fc" id="L25">	public DAOImpl(Class&lt;E&gt; clazz, boolean useEquals){</span>
+<span class="fc" id="L26">		this.validator = new DefaultValidator&lt;E&gt;();</span>
+<span class="fc" id="L27">		this.useEquals = useEquals;</span>
+<span class="fc" id="L28">		this.clazz = clazz;</span>
+<span class="fc" id="L29">	}</span>
 	
 <span class="fc" id="L31">	public DAOImpl(Class&lt;E&gt; clazz){</span>
 <span class="fc" id="L32">		this.validator = new DefaultValidator&lt;E&gt;();</span>
@@ -66,10 +66,10 @@ public class DAOImpl&lt;E&gt; implements DAO&lt;E&gt; {
 	@Override
 	public E get(E object) throws IllegalArgumentException{
 <span class="fc" id="L68">		List&lt;E&gt; objectList = db.queryByExample(clazz);</span>
-<span class="pc bpc" id="L69" title="1 of 2 branches missed.">		if(useEquals){</span>
-<span class="nc bnc" id="L70" title="All 2 branches missed.">			for(E each: objectList){</span>
-<span class="nc bnc" id="L71" title="All 2 branches missed.">				if(each.equals(object)){</span>
-<span class="nc" id="L72">					return each;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		if(useEquals){</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">			for(E each: objectList){</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">				if(each.equals(object)){</span>
+<span class="fc" id="L72">					return each;</span>
 				}
 <span class="nc" id="L74">			}</span>
 		}

@@ -49,7 +49,7 @@ JitaKyoei,org.fpij.jitakyoei.model.beans,Aluno,45,42,8,0,7,15,6,9,2,9
 JitaKyoei,org.fpij.jitakyoei.model.beans,Rg,57,3,6,0,16,1,10,1,7,1
 JitaKyoei,org.fpij.jitakyoei.model.beans,Entidade,46,48,5,1,13,16,7,11,4,11
 JitaKyoei,org.fpij.jitakyoei.model.beans,ProfessorEntidade,37,23,6,0,9,7,6,4,3,4
-JitaKyoei,org.fpij.jitakyoei.model.beans,Professor,27,41,5,1,7,9,6,5,3,5
+JitaKyoei,org.fpij.jitakyoei.model.beans,Professor,11,57,3,3,4,12,5,6,2,6
 JitaKyoei,org.fpij.jitakyoei.model.beans,Faixa,39,0,0,0,13,0,7,0,7,0
 JitaKyoei,org.fpij.jitakyoei.model.beans,Endereco,54,26,0,0,8,12,7,7,7,7
 JitaKyoei,org.fpij.jitakyoei.model.beans,Filiado,83,144,6,0,29,37,21,13,18,13
@@ -76,4 +76,4 @@ JitaKyoei,org.fpij.jitakyoei.view.gui,FiliadoPanel.new DefaultTableModel() {...}
 JitaKyoei,org.fpij.jitakyoei.view.gui,AlunoCadastrarPanel,145,0,0,0,30,0,5,0,5,0
 JitaKyoei,org.fpij.jitakyoei.model.validator,AlunoValidator,5,0,0,0,2,0,2,0,2,0
 JitaKyoei,org.fpij.jitakyoei.model.dao,DAOImpl.DefaultValidator,0,8,0,0,0,2,0,2,0,2
-JitaKyoei,org.fpij.jitakyoei.model.dao,DAOImpl,51,96,7,7,16,29,7,9,2,7
+JitaKyoei,org.fpij.jitakyoei.model.dao,DAOImpl,21,126,4,10,8,37,5,11,1,8
