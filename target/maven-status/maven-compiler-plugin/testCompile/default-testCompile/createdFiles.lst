@@ -1,0 +1,6 @@
+org\fpij\jitakyoei\model\dao\ProfessorDaoTest.class
+org\fpij\jitakyoei\model\dao\MockAppView.class
+org\fpij\jitakyoei\model\dao\EntidadeDaoTest.class
+org\fpij\jitakyoei\model\dao\AlunoDaoTest.class
+org\fpij\jitakyoei\model\dao\ProfessorEntidadeDaoTest.class
+org\fpij\jitakyoei\model\ModelIntegrationTests.class
