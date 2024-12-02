@@ -195,13 +195,6 @@
                 <version>175-1.1.RC1-snapshot</version>
             </dependency>
 
-            <!-- JUnit Dependencies -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>5.7.0</version>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
