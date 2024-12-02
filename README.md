@@ -5,4 +5,12 @@ No projeto, devemos garantir que a documentação básica esteja completa em uma
 O trabalho final da disciplina de Programação Comercial do curso de Análise e Desenvolvimento de Sistemas do IFPI consiste no desenvolvimento de uma aplicação desktop utilizando Java Swing. O projeto incorporará vários padrões de projeto, como MVC, Facade, Decorator e DAO, para estruturar a aplicação de forma eficiente. A persistência de dados será realizada com o banco de dados orientado a objetos DB4O, garantindo uma abordagem moderna e eficaz para armazenamento e recuperação de informações.
 
 ### Integrantes:
+- Bruno Umeoka Higuti - R.A: 22.121.082-6
+
+- Gabriel de Almeida Gava - R.A: 22.121.079-2
+
+- Guilherme Bizon Jeronymo - R.A: 22.121.128-7
+
+- Matheus Venâncio Scomparim - R.A: 22.121.063-6
+
 - Gustavo Leite Bueno de Oliveira - R.A: 22.121.057-8
