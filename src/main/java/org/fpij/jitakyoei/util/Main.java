@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
+import net.java.dev.genesis.helpers.StartupHelper;
 import org.fpij.jitakyoei.facade.AppFacade;
 import org.fpij.jitakyoei.facade.AppFacadeImpl;
 import org.fpij.jitakyoei.model.beans.Endereco;
