@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.fpij.jitakyoei.MockAppView;
 import org.fpij.jitakyoei.business.ProfessorEntidadeBO;
 import org.fpij.jitakyoei.business.ProfessorEntidadeBOImpl;
 import org.fpij.jitakyoei.model.beans.Endereco;
