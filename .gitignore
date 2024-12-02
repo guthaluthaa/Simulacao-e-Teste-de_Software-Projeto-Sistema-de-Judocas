@@ -10,7 +10,6 @@ fpij.db
 test.db
 
 # Diretórios de build (compilação)
-target/
 *.class
 *.log
 
