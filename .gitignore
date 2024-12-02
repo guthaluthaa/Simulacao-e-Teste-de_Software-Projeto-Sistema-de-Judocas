@@ -15,7 +15,6 @@ target/
 *.log
 
 # Dependências baixadas pelo Maven
-*.jar
 *.war
 *.ear
 *.pom
