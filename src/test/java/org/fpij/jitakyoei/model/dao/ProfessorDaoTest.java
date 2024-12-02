@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.fpij.jitakyoei.MockAppView;
 import org.fpij.jitakyoei.business.ProfessorBO;
 import org.fpij.jitakyoei.business.ProfessorBOImpl;
 import org.fpij.jitakyoei.facade.AppFacade;

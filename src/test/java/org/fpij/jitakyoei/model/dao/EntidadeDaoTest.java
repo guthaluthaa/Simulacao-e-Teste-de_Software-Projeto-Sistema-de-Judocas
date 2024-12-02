@@ -11,6 +11,7 @@ import org.fpij.jitakyoei.model.beans.Endereco;
 import org.fpij.jitakyoei.model.beans.Entidade;
 import org.fpij.jitakyoei.util.DatabaseManager;
 import org.fpij.jitakyoei.view.AppView;
+import org.fpij.jitakyoei.MockAppView;
 import org.fpij.jitakyoei.model.dao.DAO;
 import org.fpij.jitakyoei.model.dao.DAOImpl;
 import org.junit.After;
@@ -163,20 +164,4 @@ import org.junit.Test;
         }
     }
 
-    // Classe mock para AppView
-    class MockAppView implements AppView {
-        @Override
-        public void handleModelChange(Object obj) {
-            // Implementação vazia para testes
-        }
-        @Override
-        public void displayException(Exception e){
 
-        }
-        @Override
-        public void registerFacade(AppFacade facade){
-
-        }
-
-        // Implemente outros métodos se necessário
-    }
