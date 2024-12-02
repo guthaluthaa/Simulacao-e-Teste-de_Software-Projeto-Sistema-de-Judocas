@@ -4,7 +4,7 @@
 
 # net.java.dev.genesis.annotation:annotation:3.2
 mvn install:install-file \
-  -Dfile="lib/genesis.dist/genesis-annotation-jdk5-3.2.jar" \
+  -Dfile="lib/genesis/dist/genesis-annotation-jdk5-3.2.jar" \
   -DgroupId=net.java.dev.genesis.annotation \
   -DartifactId=annotation \
   -Dversion=3.2 \
@@ -12,7 +12,7 @@ mvn install:install-file \
 
 # net.java.dev.genesis:aspect:3.2
 mvn install:install-file \
-  -Dfile="lib/genesis.dist/aspect-3.2.jar" \
+  -Dfile="lib/genesis/dist/aspect-3.2.jar" \
   -DgroupId=net.java.dev.genesis \
   -DartifactId=aspect \
   -Dversion=3.2 \
@@ -20,7 +20,7 @@ mvn install:install-file \
 
 # net.java.dev.genesis.ui:client:3.2
 mvn install:install-file \
-  -Dfile="lib/genesis.dist/client-3.2.jar" \
+  -Dfile="lib/genesis/dist/client-3.2.jar" \
   -DgroupId=net.java.dev.genesis.ui \
   -DartifactId=client \
   -Dversion=3.2 \
