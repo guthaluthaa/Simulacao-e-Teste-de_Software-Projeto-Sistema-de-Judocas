@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainAppFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JitaKyoei</a> &gt; <a href="index.source.html" class="el_package">org.fpij.jitakyoei.view.gui</a> &gt; <span class="el_source">MainAppFrame.java</span></div><h1>MainAppFrame.java</h1><pre class="source lang-java linenums">/*
+ * Created by JFormDesigner on Tue Dec 08 15:20:26 GMT-03:00 2009
+ */
+
+package org.fpij.jitakyoei.view.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JToolBar;
+import javax.swing.WindowConstants;
+
+import net.java.dev.genesis.annotation.ViewHandler;
+
+import org.fpij.jitakyoei.util.DatabaseManager;
+
+/**
+ * @author wansoul
+ */
+@ViewHandler
+public class MainAppFrame extends JFrame {
+		
+	private static final long serialVersionUID = 1L;
+<span class="nc" id="L35">	public MainAppFrame() {</span>
+<span class="nc" id="L36">		initComponents();</span>
+<span class="nc" id="L37">	}</span>
+
+	public JPanel getMainPanel() {
+<span class="nc" id="L40">		return mainPanel;</span>
+	}
+
+	private void thisWindowOpened(WindowEvent e) {
+//		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+<span class="nc" id="L45">	}</span>
+
+	public JTabbedPane getTabbedPane() {
+<span class="nc" id="L48">		return tabbedPane;</span>
+	}
+
+	private void thisWindowClosed(WindowEvent e) {
+<span class="nc" id="L52">		JOptionPane.showMessageDialog(this, &quot;Fechando o banco de dados... ;)&quot;);</span>
+<span class="nc" id="L53">		DatabaseManager.close();</span>
+<span class="nc" id="L54">	}</span>
+
+	private void initComponents() {
+		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+<span class="nc" id="L58">		mainMenuBar = new JMenuBar();</span>
+<span class="nc" id="L59">		menu1 = new JMenu();</span>
+<span class="nc" id="L60">		cadastrarAlunoMenuItem = new JMenuItem();</span>
+<span class="nc" id="L61">		cadastrarProfessorMenuItem = new JMenuItem();</span>
+<span class="nc" id="L62">		cadastrarEntidadeMenuItem = new JMenuItem();</span>
+<span class="nc" id="L63">		menu4 = new JMenu();</span>
+<span class="nc" id="L64">		buscarAlunoMenuItem = new JMenuItem();</span>
+<span class="nc" id="L65">		buscarProfessorMenuItem = new JMenuItem();</span>
+<span class="nc" id="L66">		buscarEntidadeMenuItem = new JMenuItem();</span>
+<span class="nc" id="L67">		menu5 = new JMenu();</span>
+<span class="nc" id="L68">		alterarAlunoMenuItem = new JMenuItem();</span>
+<span class="nc" id="L69">		alterarProfessorMenuItem = new JMenuItem();</span>
+<span class="nc" id="L70">		alterarEntidadeMenuItem = new JMenuItem();</span>
+<span class="nc" id="L71">		menu3 = new JMenu();</span>
+<span class="nc" id="L72">		menuItem6 = new JMenuItem();</span>
+<span class="nc" id="L73">		menuItem5 = new JMenuItem();</span>
+<span class="nc" id="L74">		menuItem7 = new JMenuItem();</span>
+<span class="nc" id="L75">		menuItem8 = new JMenuItem();</span>
+<span class="nc" id="L76">		menu2 = new JMenu();</span>
+<span class="nc" id="L77">		sobreMenuItem = new JMenuItem();</span>
+<span class="nc" id="L78">		mainToolBar = new JToolBar();</span>
+<span class="nc" id="L79">		cadastrarAlunoIcon = new JButton();</span>
+<span class="nc" id="L80">		alterarAlunoIcon = new JButton();</span>
+<span class="nc" id="L81">		buscarAlunoIcon = new JButton();</span>
+<span class="nc" id="L82">		cadastrarProfessorIcon = new JButton();</span>
+<span class="nc" id="L83">		alterarProfessorIcon = new JButton();</span>
+<span class="nc" id="L84">		buscarProfessorIcon = new JButton();</span>
+<span class="nc" id="L85">		cadastrarEntidadeIcon = new JButton();</span>
+<span class="nc" id="L86">		alterarEntidadeIcon = new JButton();</span>
+<span class="nc" id="L87">		buscarEntidadeIcon = new JButton();</span>
+<span class="nc" id="L88">		tabbedPane = new JTabbedPane();</span>
+<span class="nc" id="L89">		mainPanel = new JPanel();</span>
+<span class="nc" id="L90">		botaoSplash = new JButton();</span>
+
+		//======== this ========
+<span class="nc" id="L93">		setTitle(&quot;JitaKyoei - Federa\u00e7\u00e3o Piauiense de Jud\u00f4&quot;);</span>
+<span class="nc" id="L94">		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L95">		setIconImage(new ImageIcon(&quot;icones/icon_16x16/icon-logo.png&quot;).getImage());</span>
+<span class="nc" id="L96">		setName(&quot;this&quot;);</span>
+<span class="nc" id="L97">		addWindowListener(new WindowAdapter() {</span>
+			@Override
+			public void windowClosed(WindowEvent e) {
+<span class="nc" id="L100">				thisWindowClosed(e);</span>
+<span class="nc" id="L101">			}</span>
+			@Override
+			public void windowOpened(WindowEvent e) {
+<span class="nc" id="L104">				thisWindowOpened(e);</span>
+<span class="nc" id="L105">			}</span>
+		});
+<span class="nc" id="L107">		Container contentPane = getContentPane();</span>
+<span class="nc" id="L108">		contentPane.setLayout(new BorderLayout());</span>
+
+		//======== mainMenuBar ========
+		{
+<span class="nc" id="L112">			mainMenuBar.setName(&quot;mainMenuBar&quot;);</span>
+
+			//======== menu1 ========
+			{
+<span class="nc" id="L116">				menu1.setText(&quot;Cadastrar&quot;);</span>
+<span class="nc" id="L117">				menu1.setName(&quot;menu1&quot;);</span>
+
+				//---- cadastrarAlunoMenuItem ----
+<span class="nc" id="L120">				cadastrarAlunoMenuItem.setText(&quot;Aluno&quot;);</span>
+<span class="nc" id="L121">				cadastrarAlunoMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/close.gif&quot;)));</span>
+<span class="nc" id="L122">				cadastrarAlunoMenuItem.setName(&quot;cadastrarAlunoMenuItem&quot;);</span>
+<span class="nc" id="L123">				menu1.add(cadastrarAlunoMenuItem);</span>
+
+				//---- cadastrarProfessorMenuItem ----
+<span class="nc" id="L126">				cadastrarProfessorMenuItem.setText(&quot;Professor&quot;);</span>
+<span class="nc" id="L127">				cadastrarProfessorMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/teacher_add-16.png&quot;)));</span>
+<span class="nc" id="L128">				cadastrarProfessorMenuItem.setName(&quot;cadastrarProfessorMenuItem&quot;);</span>
+<span class="nc" id="L129">				menu1.add(cadastrarProfessorMenuItem);</span>
+
+				//---- cadastrarEntidadeMenuItem ----
+<span class="nc" id="L132">				cadastrarEntidadeMenuItem.setText(&quot;Entidade&quot;);</span>
+<span class="nc" id="L133">				cadastrarEntidadeMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/entidade_add-16.png&quot;)));</span>
+<span class="nc" id="L134">				cadastrarEntidadeMenuItem.setName(&quot;cadastrarEntidadeMenuItem&quot;);</span>
+<span class="nc" id="L135">				menu1.add(cadastrarEntidadeMenuItem);</span>
+			}
+<span class="nc" id="L137">			mainMenuBar.add(menu1);</span>
+
+			//======== menu4 ========
+			{
+<span class="nc" id="L141">				menu4.setText(&quot;Buscar&quot;);</span>
+<span class="nc" id="L142">				menu4.setName(&quot;menu4&quot;);</span>
+
+				//---- buscarAlunoMenuItem ----
+<span class="nc" id="L145">				buscarAlunoMenuItem.setText(&quot;Aluno&quot;);</span>
+<span class="nc" id="L146">				buscarAlunoMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/aluno_search-16.png&quot;)));</span>
+<span class="nc" id="L147">				buscarAlunoMenuItem.setName(&quot;buscarAlunoMenuItem&quot;);</span>
+<span class="nc" id="L148">				menu4.add(buscarAlunoMenuItem);</span>
+
+				//---- buscarProfessorMenuItem ----
+<span class="nc" id="L151">				buscarProfessorMenuItem.setText(&quot;Professor&quot;);</span>
+<span class="nc" id="L152">				buscarProfessorMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/teacher_search-16.png&quot;)));</span>
+<span class="nc" id="L153">				buscarProfessorMenuItem.setName(&quot;buscarProfessorMenuItem&quot;);</span>
+<span class="nc" id="L154">				menu4.add(buscarProfessorMenuItem);</span>
+
+				//---- buscarEntidadeMenuItem ----
+<span class="nc" id="L157">				buscarEntidadeMenuItem.setText(&quot;Entidade&quot;);</span>
+<span class="nc" id="L158">				buscarEntidadeMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/entidade_search-16.png&quot;)));</span>
+<span class="nc" id="L159">				buscarEntidadeMenuItem.setName(&quot;buscarEntidadeMenuItem&quot;);</span>
+<span class="nc" id="L160">				menu4.add(buscarEntidadeMenuItem);</span>
+			}
+<span class="nc" id="L162">			mainMenuBar.add(menu4);</span>
+
+			//======== menu5 ========
+			{
+<span class="nc" id="L166">				menu5.setText(&quot;Alterar&quot;);</span>
+<span class="nc" id="L167">				menu5.setName(&quot;menu5&quot;);</span>
+
+				//---- alterarAlunoMenuItem ----
+<span class="nc" id="L170">				alterarAlunoMenuItem.setText(&quot;Aluno&quot;);</span>
+<span class="nc" id="L171">				alterarAlunoMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/aluno_edit-16.png&quot;)));</span>
+<span class="nc" id="L172">				alterarAlunoMenuItem.setName(&quot;alterarAlunoMenuItem&quot;);</span>
+<span class="nc" id="L173">				menu5.add(alterarAlunoMenuItem);</span>
+
+				//---- alterarProfessorMenuItem ----
+<span class="nc" id="L176">				alterarProfessorMenuItem.setText(&quot;Professor&quot;);</span>
+<span class="nc" id="L177">				alterarProfessorMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/teacher_edit-16.png&quot;)));</span>
+<span class="nc" id="L178">				alterarProfessorMenuItem.setName(&quot;alterarProfessorMenuItem&quot;);</span>
+<span class="nc" id="L179">				menu5.add(alterarProfessorMenuItem);</span>
+
+				//---- alterarEntidadeMenuItem ----
+<span class="nc" id="L182">				alterarEntidadeMenuItem.setText(&quot;Entidade&quot;);</span>
+<span class="nc" id="L183">				alterarEntidadeMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/entidade_edit-16.png&quot;)));</span>
+<span class="nc" id="L184">				alterarEntidadeMenuItem.setName(&quot;alterarEntidadeMenuItem&quot;);</span>
+<span class="nc" id="L185">				menu5.add(alterarEntidadeMenuItem);</span>
+			}
+<span class="nc" id="L187">			mainMenuBar.add(menu5);</span>
+
+			//======== menu3 ========
+			{
+<span class="nc" id="L191">				menu3.setText(&quot;Relat\u00f3rios&quot;);</span>
+<span class="nc" id="L192">				menu3.setName(&quot;menu3&quot;);</span>
+
+				//---- menuItem6 ----
+<span class="nc" id="L195">				menuItem6.setText(&quot;Aniversariantes do M\u00eas&quot;);</span>
+<span class="nc" id="L196">				menuItem6.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/calendario.png&quot;)));</span>
+<span class="nc" id="L197">				menuItem6.setName(&quot;menuItem6&quot;);</span>
+<span class="nc" id="L198">				menu3.add(menuItem6);</span>
+
+				//---- menuItem5 ----
+<span class="nc" id="L201">				menuItem5.setText(&quot;Relat\u00f3rio de Alunos&quot;);</span>
+<span class="nc" id="L202">				menuItem5.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/relatorio-16.png&quot;)));</span>
+<span class="nc" id="L203">				menuItem5.setName(&quot;menuItem5&quot;);</span>
+<span class="nc" id="L204">				menu3.add(menuItem5);</span>
+
+				//---- menuItem7 ----
+<span class="nc" id="L207">				menuItem7.setText(&quot;Relat\u00f3rio de Professores&quot;);</span>
+<span class="nc" id="L208">				menuItem7.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/relatorio-16.png&quot;)));</span>
+<span class="nc" id="L209">				menuItem7.setName(&quot;menuItem7&quot;);</span>
+<span class="nc" id="L210">				menu3.add(menuItem7);</span>
+
+				//---- menuItem8 ----
+<span class="nc" id="L213">				menuItem8.setText(&quot;Relat\u00f3rio de Institui\u00e7\u00f5es&quot;);</span>
+<span class="nc" id="L214">				menuItem8.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/relatorio-16.png&quot;)));</span>
+<span class="nc" id="L215">				menuItem8.setName(&quot;menuItem8&quot;);</span>
+<span class="nc" id="L216">				menu3.add(menuItem8);</span>
+			}
+<span class="nc" id="L218">			mainMenuBar.add(menu3);</span>
+
+			//======== menu2 ========
+			{
+<span class="nc" id="L222">				menu2.setText(&quot;Ajuda&quot;);</span>
+<span class="nc" id="L223">				menu2.setName(&quot;menu2&quot;);</span>
+
+				//---- sobreMenuItem ----
+<span class="nc" id="L226">				sobreMenuItem.setText(&quot;Sobre&quot;);</span>
+<span class="nc" id="L227">				sobreMenuItem.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_16x16/info.png&quot;)));</span>
+<span class="nc" id="L228">				sobreMenuItem.setName(&quot;sobreMenuItem&quot;);</span>
+<span class="nc" id="L229">				menu2.add(sobreMenuItem);</span>
+			}
+<span class="nc" id="L231">			mainMenuBar.add(menu2);</span>
+		}
+<span class="nc" id="L233">		setJMenuBar(mainMenuBar);</span>
+
+		//======== mainToolBar ========
+		{
+<span class="nc" id="L237">			mainToolBar.setFloatable(false);</span>
+<span class="nc" id="L238">			mainToolBar.setName(&quot;mainToolBar&quot;);</span>
+
+			//---- cadastrarAlunoIcon ----
+<span class="nc" id="L241">			cadastrarAlunoIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/aluno_add.png&quot;)));</span>
+<span class="nc" id="L242">			cadastrarAlunoIcon.setToolTipText(&quot;Novo Aluno&quot;);</span>
+<span class="nc" id="L243">			cadastrarAlunoIcon.setName(&quot;cadastrarAlunoIcon&quot;);</span>
+<span class="nc" id="L244">			mainToolBar.add(cadastrarAlunoIcon);</span>
+
+			//---- alterarAlunoIcon ----
+<span class="nc" id="L247">			alterarAlunoIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/aluno_edit.png&quot;)));</span>
+<span class="nc" id="L248">			alterarAlunoIcon.setToolTipText(&quot;Editar Aluno&quot;);</span>
+<span class="nc" id="L249">			alterarAlunoIcon.setName(&quot;alterarAlunoIcon&quot;);</span>
+<span class="nc" id="L250">			mainToolBar.add(alterarAlunoIcon);</span>
+
+			//---- buscarAlunoIcon ----
+<span class="nc" id="L253">			buscarAlunoIcon.setToolTipText(&quot;Buscar Aluno&quot;);</span>
+<span class="nc" id="L254">			buscarAlunoIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/aluno_search.png&quot;)));</span>
+<span class="nc" id="L255">			buscarAlunoIcon.setName(&quot;buscarAlunoIcon&quot;);</span>
+<span class="nc" id="L256">			mainToolBar.add(buscarAlunoIcon);</span>
+<span class="nc" id="L257">			mainToolBar.addSeparator();</span>
+
+			//---- cadastrarProfessorIcon ----
+<span class="nc" id="L260">			cadastrarProfessorIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/teacher_add.png&quot;)));</span>
+<span class="nc" id="L261">			cadastrarProfessorIcon.setToolTipText(&quot;Novo Professor&quot;);</span>
+<span class="nc" id="L262">			cadastrarProfessorIcon.setName(&quot;cadastrarProfessorIcon&quot;);</span>
+<span class="nc" id="L263">			mainToolBar.add(cadastrarProfessorIcon);</span>
+
+			//---- alterarProfessorIcon ----
+<span class="nc" id="L266">			alterarProfessorIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/teacher_edit.png&quot;)));</span>
+<span class="nc" id="L267">			alterarProfessorIcon.setToolTipText(&quot;Editar Professor&quot;);</span>
+<span class="nc" id="L268">			alterarProfessorIcon.setName(&quot;alterarProfessorIcon&quot;);</span>
+<span class="nc" id="L269">			mainToolBar.add(alterarProfessorIcon);</span>
+
+			//---- buscarProfessorIcon ----
+<span class="nc" id="L272">			buscarProfessorIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/teacher_search.png&quot;)));</span>
+<span class="nc" id="L273">			buscarProfessorIcon.setToolTipText(&quot;Buscar Professor&quot;);</span>
+<span class="nc" id="L274">			buscarProfessorIcon.setName(&quot;buscarProfessorIcon&quot;);</span>
+<span class="nc" id="L275">			mainToolBar.add(buscarProfessorIcon);</span>
+<span class="nc" id="L276">			mainToolBar.addSeparator();</span>
+
+			//---- cadastrarEntidadeIcon ----
+<span class="nc" id="L279">			cadastrarEntidadeIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/entidade_add.png&quot;)));</span>
+<span class="nc" id="L280">			cadastrarEntidadeIcon.setToolTipText(&quot;Nova Entidade&quot;);</span>
+<span class="nc" id="L281">			cadastrarEntidadeIcon.setName(&quot;cadastrarEntidadeIcon&quot;);</span>
+<span class="nc" id="L282">			mainToolBar.add(cadastrarEntidadeIcon);</span>
+
+			//---- alterarEntidadeIcon ----
+<span class="nc" id="L285">			alterarEntidadeIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/entidade_edit.png&quot;)));</span>
+<span class="nc" id="L286">			alterarEntidadeIcon.setToolTipText(&quot;Editar Entidade&quot;);</span>
+<span class="nc" id="L287">			alterarEntidadeIcon.setName(&quot;alterarEntidadeIcon&quot;);</span>
+<span class="nc" id="L288">			mainToolBar.add(alterarEntidadeIcon);</span>
+
+			//---- buscarEntidadeIcon ----
+<span class="nc" id="L291">			buscarEntidadeIcon.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/entidade_search.png&quot;)));</span>
+<span class="nc" id="L292">			buscarEntidadeIcon.setToolTipText(&quot;Buscar Entidade&quot;);</span>
+<span class="nc" id="L293">			buscarEntidadeIcon.setName(&quot;buscarEntidadeIcon&quot;);</span>
+<span class="nc" id="L294">			mainToolBar.add(buscarEntidadeIcon);</span>
+		}
+<span class="nc" id="L296">		contentPane.add(mainToolBar, BorderLayout.NORTH);</span>
+
+		//======== tabbedPane ========
+		{
+<span class="nc" id="L300">			tabbedPane.setName(&quot;tabbedPane&quot;);</span>
+
+			//======== mainPanel ========
+			{
+<span class="nc" id="L304">				mainPanel.setName(&quot;mainPanel&quot;);</span>
+<span class="nc" id="L305">				mainPanel.setLayout(new BorderLayout());</span>
+
+				//---- botaoSplash ----
+<span class="nc" id="L308">				botaoSplash.setIcon(new ImageIcon(getClass().getResource(&quot;/icones/icon_32x32/FPIJ-splash.png&quot;)));</span>
+<span class="nc" id="L309">				botaoSplash.setName(&quot;botaoSplash&quot;);</span>
+<span class="nc" id="L310">				mainPanel.add(botaoSplash, BorderLayout.CENTER);</span>
+			}
+<span class="nc" id="L312">			tabbedPane.addTab(&quot;JitaKyoei&quot;, mainPanel);</span>
+
+		}
+<span class="nc" id="L315">		contentPane.add(tabbedPane, BorderLayout.CENTER);</span>
+<span class="nc" id="L316">		setSize(965, 720);</span>
+		// JFormDesigner - End of component initialization  //GEN-END:initComponents
+<span class="nc" id="L318">	}</span>
+
+	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+	private JMenuBar mainMenuBar;
+	private JMenu menu1;
+	private JMenuItem cadastrarAlunoMenuItem;
+	private JMenuItem cadastrarProfessorMenuItem;
+	private JMenuItem cadastrarEntidadeMenuItem;
+	private JMenu menu4;
+	private JMenuItem buscarAlunoMenuItem;
+	private JMenuItem buscarProfessorMenuItem;
+	private JMenuItem buscarEntidadeMenuItem;
+	private JMenu menu5;
+	private JMenuItem alterarAlunoMenuItem;
+	private JMenuItem alterarProfessorMenuItem;
+	private JMenuItem alterarEntidadeMenuItem;
+	private JMenu menu3;
+	private JMenuItem menuItem6;
+	private JMenuItem menuItem5;
+	private JMenuItem menuItem7;
+	private JMenuItem menuItem8;
+	private JMenu menu2;
+	private JMenuItem sobreMenuItem;
+	private JToolBar mainToolBar;
+	private JButton cadastrarAlunoIcon;
+	private JButton alterarAlunoIcon;
+	private JButton buscarAlunoIcon;
+	private JButton cadastrarProfessorIcon;
+	private JButton alterarProfessorIcon;
+	private JButton buscarProfessorIcon;
+	private JButton cadastrarEntidadeIcon;
+	private JButton alterarEntidadeIcon;
+	private JButton buscarEntidadeIcon;
+	private JTabbedPane tabbedPane;
+	private JPanel mainPanel;
+	private JButton botaoSplash;
+	// JFormDesigner - End of variables declaration  //GEN-END:variables
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
