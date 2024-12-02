@@ -28,8 +28,8 @@ public class FiliadoID {
 
 	private static FiliadoID getInstance() {
 <span class="fc" id="L30">		List&lt;FiliadoID&gt; list = dao.list();</span>
-<span class="pc bpc" id="L31" title="1 of 2 branches missed.">		if (list.size() &gt; 0) {</span>
-<span class="nc" id="L32">			return list.get(0);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		if (list.size() &gt; 0) {</span>
+<span class="fc" id="L32">			return list.get(0);</span>
 		} else {
 <span class="fc" id="L34">			FiliadoID fid = new FiliadoID();</span>
 <span class="fc" id="L35">			dao.save(fid);</span>
