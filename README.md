@@ -1,8 +1,8 @@
 ## Projeto de Teste de Software
 No projeto, devemos garantir que a documentação básica esteja completa em uma wiki, criar modelos de casos de uso e especificações, além de um modelo de domínio. Também precisamos organizar um repositório coerente e configurar corretamente o sistema de build com Maven ou Gradle, implementar controle de problemas usando labels e estabelecer um fluxo consistente de gerenciamento de configuração com Merge Requests, revisões e integração contínua (CI). Além disso, devemos realizar testes de unidade com JUnit, especificar e executar cinco testes de caixa-branca, gerar métricas de cobertura de código, documentar a especificação de testes de sistema e realizar testes de caso de uso, incluindo tabelas de cenários e de decisão.
 
-## Relatório de Cobertura de Código      ![Codecov (with branch)](https://img.shields.io/codecov/c/github/guthaluthaa/Simulacao-e-Teste-de_Software-Projeto-Sistema-de-Judocas/master)
-
+## Relatório de Cobertura de Código    
+ ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/guthaluthaa/Simulacao-e-Teste-de_Software-Projeto-Sistema-de-Judocas/.github/workflows/maven.yml)
 
 O relatório mais recente de cobertura de código está disponível [aqui](https://guthaluthaa.github.io/Simulacao-e-Teste-de_Software-Projeto-Sistema-de-Judocas/).
 
