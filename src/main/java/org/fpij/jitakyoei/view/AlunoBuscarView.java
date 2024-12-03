@@ -117,4 +117,15 @@ public class AlunoBuscarView implements ViewComponent {
 		this.selectedAluno = selectedAluno;
 	}
 
+
+	public CamposBuscaForm getCampoBuscaForm() {
+		return this.campoBusca;
+	}
+
+	public DefaultTableModel getAlunoTableModel() {
+		return this.alunoTableModel;
+	}
+
+
+
 }
